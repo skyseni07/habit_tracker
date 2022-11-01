@@ -1,0 +1,71 @@
+.todo_template {
+  height: 400px;
+  display: grid;
+  width: 450px;
+  background-color: white;
+  padding: 30px 40px 22px 40px;
+  margin: calc(100vh/2 - 225px) auto 0;
+  box-shadow: 10px 10px 10px var(--shadow-col--);
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    margin-left: -5px;
+
+    .title {
+      width: 170px;
+      font: italic 700 35px 'Nunito';
+      // font-weight: 900;
+      letter-spacing: -0.5px;
+      color: var(--red-col--);
+
+      p {
+        margin: 0;
+        padding: 0;
+        line-height: 38px;
+      }
+    }
+  }
+
+  .date {
+    display: flex;
+    align-items: center;
+    font-family: 'Nunito', sans-serif;
+    color: var(--black-col--);
+
+    .left_col {
+      font-size: 14px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      // font-weight:700;
+      margin-right: 3px;
+
+      .month {
+        margin-bottom: -2px;
+      }
+    }
+
+    .right_col {
+      font-size: 40px;
+      font-weight: 500;
+      line-height: 0.5rem;
+    }
+  }
+
+  .content {
+    margin-left: -5px;
+  }
+}
+
+@media screen and (max-width: 1090px) {
+  .todo_template {
+    width: 450px;
+  }
+}
+
+@media screen and (max-height: 450px) {
+  .todo_template {
+    margin: 0px auto 50px;
+  }
+}

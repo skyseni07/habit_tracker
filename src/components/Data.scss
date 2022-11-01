@@ -1,0 +1,56 @@
+
+.data{
+  margin-top: 15px;
+  display: flex;
+  justify-content: flex-end;
+  text-align: center;
+
+  .clear_btn{
+    margin-left:5px;
+    margin-right: -5px;
+  }
+
+  .save_btn,
+  .clear_btn{
+    position: relative;
+    display: inline-block;
+
+    span{
+      visibility: hidden;
+      width: 220px;
+      background-color: var(--black-col--);
+      color: white;
+      text-align: center;
+      border: 1px solid black;
+      padding: 5px 10px;
+      position: absolute;
+      bottom: 115%;
+      margin-left: -150px;
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+  }
+
+  .save_btn:hover span,
+  .clear_btn:hover span{
+    visibility: visible;
+    opacity: 1;
+  }
+  
+  a {
+    outline: none;
+    border: none;
+    background: none;
+    color: var(--black-col--);
+  }
+
+  svg{
+    font-size: 27px;
+    transition: transform 300ms ease;
+
+    &:hover {
+      cursor: pointer;
+      transform: scale(1.1);
+    } 
+  }
+}

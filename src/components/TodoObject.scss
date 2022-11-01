@@ -1,0 +1,42 @@
+
+
+.todo_object{
+  display: flex;
+  align-items: center;
+
+  .checkbox{
+    display: flex;
+    font-size: 15px;
+    margin: 1px 5px;
+    flex: 1;
+    align-items: center;
+
+    svg{
+      color: var(--black-col--);
+    }
+
+    .text{
+      margin-left: 5px;
+    }
+
+    &.checked{
+      svg{
+        color:var(--blue-col--);
+      }
+
+      .text{
+        text-decoration: line-through;
+      }
+    }
+  }
+
+  .remove{
+    font-size: 17px;
+    color: var(--black-col--);
+    cursor: pointer;
+
+    &:hover{
+      color:red;
+    }
+  }
+}

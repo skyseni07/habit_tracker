@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Nanum+Gothic:400');
+
+
+:root{
+  --shadow-col-- :#bababa9e; 
+  --mint-col--: #7fdfbf;
+  --red-col--: #fb4e4e;
+  --black-col--:#353535;
+  --blue-col--:#3838d8;
+  --ligth-gray-col--: #ffffff33;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  letter-spacing: 0.1px;
+  margin: 0;
+  padding: 0;
+  background-color: rgb(243, 243, 243);
+}
+

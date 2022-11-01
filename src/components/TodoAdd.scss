@@ -1,0 +1,126 @@
+.todo_add {
+  display: flex;
+  align-items: center;
+  margin: 12px auto 10px;
+
+  .dropdown svg {
+    font-size: 25px;
+  }
+
+  select {
+    flex: 1;
+    font-family: 'Nanum Gothic';
+    font-size: 15px;
+    line-height: 2;
+    color: var(--black-col--);
+    cursor: pointer;
+    -o-appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 150px;
+    height: 40px;
+    padding: 0px;
+    outline: none;
+    border: none;
+    color: var(--red-col--);
+  }
+
+  button {
+    margin-right: -2px;
+    display: flex;
+    align-items: center;
+    padding-right: 0;
+    outline: none;
+    border: 0;
+    background: none;
+
+    svg {
+      font-size: 21px;
+      color: var(--blue-col--);
+      cursor: pointer;
+    }
+  }
+}
+
+.ReactModal__Content {
+  button {
+    padding: 0px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    color: var(--blue-col--);
+    background: none;
+  }
+
+  #header {
+    display: flex;
+    flex-direction: column;
+
+    button {
+      display: flex;
+      justify-content: flex-end;
+
+      svg{
+        font-size: 23px;
+      }
+    }
+
+    h2 {
+      margin: 4px auto 25px;
+      font-size: 20px;
+      text-align: center;
+      font-weight: 500;
+      padding: 0;
+    }
+  }
+
+  #add_area {
+    padding: 0px 5px 0px 7px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    input {
+      flex: 1;
+      font-size: 14px;
+      outline: none;
+      border: none;
+      border-bottom: 1px solid var(--shadow-col--);
+
+      &::placeholder {
+        font-weight: 300;
+      }
+    }
+
+    button{
+      font-size: 19px;
+    }
+  }
+
+  #content{
+    padding: 0px 5px 0px 7px;
+
+    ul {
+      list-style: none;
+      margin: 10px auto;
+      padding: 0;
+  
+      li {
+        padding-left: 2px;
+        font-size: 14px;
+        margin: 7px auto;
+        display: flex;
+        justify-content: space-between;
+
+        span{
+          flex: 1;
+        }
+
+        button{
+          margin-right: 1.25px;
+        }
+      }
+    }
+  }
+}
