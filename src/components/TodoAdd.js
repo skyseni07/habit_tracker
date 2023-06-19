@@ -28,6 +28,7 @@ const customStyles = {
   },
 };
 
+
 function TodoAdd({ onAdd }) {
   const [value, setValue] = useState("");
 
@@ -37,6 +38,7 @@ function TodoAdd({ onAdd }) {
       if (e.target.value === "직접입력") {
         openModal()
       };
+      
     }
     , []
   )
@@ -44,6 +46,10 @@ function TodoAdd({ onAdd }) {
   const onSubmit = useCallback(
     e => {
       e.preventDefault();
+      if (value === '직접입력' || value ==="" ) {
+        alert('유효하지 않은 값이 선택되었습니다.')
+        return;
+      }
       onAdd(value);
     }
     , [onAdd, value]
@@ -61,13 +67,23 @@ function TodoAdd({ onAdd }) {
     setIsOpen(false);
   }
 
-  const [toDoLists, setToDoLists] = useState(JSON.parse(localStorage.getItem('toDoLists')));
+  let defaultLists;
+
+if (JSON.parse(localStorage.getItem('toDoLists'))  === null) {
+  defaultLists = [ "운동 30분", "개발 공부하기","청소하기"]
+} else {
+  defaultLists = JSON.parse(localStorage.getItem('toDoLists'));
+}
+
+  const [toDoLists, setToDoLists] = useState(defaultLists);
   localStorage.setItem('toDoLists', JSON.stringify(toDoLists));
 
+  
   const onRemoveList = (id) => {
     setToDoLists(toDoLists.filter(list => (
       list !== toDoLists[id]
     )))
+   
   }
 
   //모달창 내에서 투두리스트 추가
@@ -75,12 +91,14 @@ function TodoAdd({ onAdd }) {
 
   const onChangeToDoList = (e) => {
     setToDoListValue(e.target.value)
+    
   }
 
   const onAddToDoList = (e) => {
     setToDoLists(toDoLists.concat(toDoListValue))
     localStorage.setItem('toDoLists', JSON.stringify(toDoLists))
     setToDoListValue([])
+   
   }
 
   return (
@@ -91,9 +109,12 @@ function TodoAdd({ onAdd }) {
         </div>
         <select onChange={onChange} >
           <option value="" >할 일을 추가하세요.</option>
-          {toDoLists.map((list, index) => (
+         
+          {
+          toDoLists.map((list, index) => (
             <option key={index} value={list.text}>{list}</option>
-          ))}
+          ))
+          }
           <option value="직접입력">직접 입력</option>
         </select>
         <button type='submit'>

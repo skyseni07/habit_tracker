@@ -1,7 +1,7 @@
 import { HashRouter, Route } from "react-router-dom";
 import Result from './routes/Result';
 import Home from './routes/Home';
-import Nav from './components/Nav';
+import Nav from "./components/Nav";
 
 function App() {
   return (

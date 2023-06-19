@@ -1,6 +1,24 @@
-
-.TodoList{
+.TodoList {
   display: flex;
   flex-direction: column;
-  height: 160px;
+  height: 150px;
+  overflow-y: auto;
+  margin-right: 5px;
+
+  &::-webkit-scrollbar {
+    width: 6px;
+    border-radius: 6px;
+  }
+  
+  &::-webkit-scrollbar-thumb {
+    border-radius: 6px;
+    background: rgba(0, 0, 0, 0.2);
+  }
+
+}
+
+@media (max-width: 480px) {
+  .TodoList {
+    height: 320px;
+  }
 }

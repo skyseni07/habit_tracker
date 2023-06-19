@@ -3,6 +3,8 @@
 .todo_object{
   display: flex;
   align-items: center;
+  width: 375px;
+  margin: 0px 0px 2px 5px;
 
   .checkbox{
     display: flex;
@@ -38,5 +40,11 @@
     &:hover{
       color:red;
     }
+  }
+}
+
+@media (max-width: 480px) {
+  .todo_object {
+   width: 94.5%;
   }
 }

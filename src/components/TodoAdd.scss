@@ -1,7 +1,8 @@
 .todo_add {
   display: flex;
   align-items: center;
-  margin: 12px auto 10px;
+  margin: 0px 0px 5px 5px;
+  width: 375px;
 
   .dropdown svg {
     font-size: 25px;
@@ -122,5 +123,13 @@
         }
       }
     }
+  }
+}
+
+
+@media (max-width: 480px) {
+  .todo_add {
+    margin-top: 9px;  
+   width: 93%;
   }
 }

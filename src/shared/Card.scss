@@ -1,0 +1,22 @@
+.card {
+  height: 400px;
+  display: grid;
+  width: 450px;
+  background-color: white;
+  padding:30px 29px 33px 33px;
+  margin: calc(100vh/2 - 225px) auto 0;
+  box-shadow: 10px 10px 10px var(--shadow-col--);
+
+}
+
+
+/* 미디어쿼리 */
+@media (max-width: 480px) {
+  .card{
+    width: 90%;
+    height: 550px;
+    margin: 5%;
+    padding: 21px 21px 245px 21px;
+    overflow: hidden;
+  }
+}

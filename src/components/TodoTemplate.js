@@ -1,8 +1,8 @@
 import React from 'react';
+import Card from '../shared/Card';
 import './TodoTemplate.scss';
 
 function TodoTemplate({ children }) {
-
   const date = new Date();
   const year = date.getFullYear();
   const monthNames = ["JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT", "NOV", "DEC"];
@@ -10,7 +10,7 @@ function TodoTemplate({ children }) {
   const day = date.getDate();
 
   return (
-    <div className='todo_template'>
+    <Card>
       <div className='header'>
         <div className='title'>
           <p>Today's</p>
@@ -27,7 +27,7 @@ function TodoTemplate({ children }) {
         </div>
       </div>
       <div className='content'>{children}</div>
-    </div >
+    </Card>
   )
 }
 

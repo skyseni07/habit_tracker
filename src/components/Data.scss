@@ -1,9 +1,10 @@
 
 .data{
-  margin-top: 15px;
+  margin-top: 33px;
   display: flex;
   justify-content: flex-end;
   text-align: center;
+  width: 390px;
 
   .clear_btn{
     margin-left:5px;
@@ -52,5 +53,12 @@
       cursor: pointer;
       transform: scale(1.1);
     } 
+  }
+}
+
+
+@media (max-width: 480px) {
+  .data {
+   width: 92%;
   }
 }
