@@ -151,9 +151,9 @@ if (JSON.parse(localStorage.getItem('toDoLists'))  === null) {
 
           <div id='content'>
             <ul>
-              {toDoLists.map((자주쓰는목록, index) => (
+              {toDoLists.map((usedList, index) => (
                 <li key={index}>
-                  <span>{자주쓰는목록}</span>
+                  <span>{usedList}</span>
                   <button key={index} onClick={() => onRemoveList(index)}>
                     <VscDiffRemoved />
                   </button>
